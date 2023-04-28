@@ -14,9 +14,10 @@ const messages = [
     "<p>He said how you make him happy, how strong you are, how much he loves you and how important you are to him</p>",
     "<p>Is he your boyfriend?</p>",
     "<p>Not yet? aww, well maybe things will change for you soon :)</p>",
-    "<p>Also Brice, said he would like to watch Hello Kitty with you</p>",
+    "<p>He seems to really love you</p>",
+    "<p>Also, Brice said he would like to watch Hello Kitty with you</p>",
     "<p>I look forward to seeing you two on my adventures</p>",
-    "<p>I am very proud of you Ash.<br> Unfortunately it's time for me to go. But Brice has something to tell you </p>",
+    "<p>I am proud of you Ash strong girl.<br> Unfortunately it's time for me to go. But Brice has something to tell you </p>",
     "<p>Have a good time together! And I will you soon!</p>",
 ];
 

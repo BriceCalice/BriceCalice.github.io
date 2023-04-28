@@ -72,6 +72,7 @@ body {
 .enveloppe-section{
     display: flex;
     justify-content: center;
+    margin: 300px 0;
 }
 .enveloppe{
     display: flex;
@@ -358,3 +359,26 @@ body {
     0%{opacity: 1; max-height: 100px;}
     100%{opacity: 0; max-height: 0;}
 }
+
+.letter-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.love-letter{
+    max-width: 900px;
+    line-height: 150%;
+    margin-bottom: 100px;
+}
+
+.note{
+    line-height: 100%;
+}
+
+.note-1{
+    margin: 500px 0;
+}
+
