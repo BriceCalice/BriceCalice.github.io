@@ -7,8 +7,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
     /* background-color: #FF69B4; */
-    /* background-image: url('images/helloKittyBackground.jpg'); */
-
     /* background-image: url("images/hello_kitty.jpg"); */
 }
 .vertical-flow {
@@ -18,6 +16,10 @@ body {
 }
 .flex-row{
     display: flex;
+}
+
+.align-center{
+    align-items: center;
 }
 .justify-center{
     justify-content: center;
@@ -84,8 +86,11 @@ body {
 .banquet-section {
     padding: 10px;
     display: flex;
+    align-items: center;
+    flex-direction: column;
     max-width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
+    
 }
 
 .section-wrapper{
@@ -93,18 +98,20 @@ body {
     flex-direction: row;
     flex-basis: auto;
     flex-wrap: wrap;
-    max-width: 100%;
+    max-width: 900px;
     justify-content: center;
 }
 .food-item{
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 10px;
+    margin: 20px 10px;
     text-align: center;
     max-width: 250px;
+    animation: slideUp 0.8s ease forwards;
+    opacity: 0;
+    margin-top: 100px;
 }
 .item-frame{
     width: 250px;
@@ -116,19 +123,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background-color: #FF69B4; */
+    /* color: white; */
 }
 .item-frame img{
     object-fit: cover ;
     object-position: center;
     height: 100%;
     width: 100%;
-    transition: 0s;
+    transition: 0.2s ease;
     z-index: 2;
 
 }
+
 .item-frame:hover img{
     /* display: none; */
-    opacity: 0.4;
+    opacity: 0.3;
+    /* transform: scale(1.05); */
 }
 .hidden-thought{
     display: none;
@@ -141,4 +152,209 @@ body {
 
 .item-frame:hover .hidden-thought{
     display: block;
+}
+
+@keyframes slideUp {
+    0%{opacity: 0; margin-top: 100px}
+    100%{opacity: 1; margin-top: 0px}
+}
+
+.banquet-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 100px auto;
+    line-height: 200%;
+}
+
+.hot-pink{
+    color: #FF69B4;
+}
+
+.food-name{
+    margin-top: 10px;
+}
+
+.kittyfy{
+    background-image: url('images/helloKittyBackground.jpg');
+}
+
+.hello-kitty-section{
+    border-top: 10px solid #FF69B4;
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 10px;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.flex-column{
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.welcome-kitty{
+    width: 100%;
+    min-height: 550px;
+    background-color: white;
+    margin-top: 250px;
+    padding-bottom: 200px;
+    /* position: relative; */
+}
+
+#decorative-ribbon{
+    position: absolute;
+    top: -100px;
+    width: 250px;
+    height: 250px;
+}
+
+.post-banquet-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 900px;
+    margin: 100px auto;
+    line-height: 150%;
+}
+
+#hi-kitty {
+    /* /* width: 250px; */
+    opacity: 0;
+    height: 250px; 
+}
+
+
+.kitty-appear{
+    height: 250px;
+    opacity: 0;
+    animation: kitty-appears 2s  ease 3s forwards;
+}
+
+@keyframes kitty-appears {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.chat-box-section{
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    opacity: 0;
+    /* justify-content: center; */
+}
+.chat-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 0 20px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 40px;
+    z-index: 5;
+    background-color: white;
+    text-align: center;
+}
+
+.chat-box::after{
+    content: '';
+    border: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 3px;
+    background-color: white;
+    z-index: 1;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.chat-box-appear{
+    animation: chatbox 2s ease 3s forwards;
+}
+
+@keyframes chatbox {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.button-section{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+}
+
+.button-section button{
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    width: 50%;
+    height: 100%;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+.button-section button:hover, .button-section button:focus{
+    background-color: #FF69B4;
+}
+
+.date{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    line-height: 150%;
+    padding: 0 15px;
+}
+.message{
+    max-width: 900px;
+    font-size: 15px;
+}
+
+.music-section{
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    margin-top: 300px;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.music-player{
+    margin: 20px 0;
+}
+.text{
+    height: 100px;
+    overflow: hidden;
+    max-height: 100px;
+    transition: max-height;
+}
+.ghosty{
+    opacity: 1;
+    animation: vanish 2s ease 0s forwards;
+}
+@keyframes vanish{
+    0%{opacity: 1; max-height: 100px;}
+    100%{opacity: 0; max-height: 0;}
 }
